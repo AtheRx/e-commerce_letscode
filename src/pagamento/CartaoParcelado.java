@@ -1,5 +1,7 @@
 package pagamento;
 
+import caixa.CarrinhoDeCompra;
+
 public class CartaoParcelado implements FormaDePagamento{
     
     private int parcelas;
@@ -8,12 +10,21 @@ public class CartaoParcelado implements FormaDePagamento{
         this.setParcelas(parcelas);
     }
 
-    public void setParcelas(int parcelas) throws Exception {
+    private void setParcelas(int parcelas) throws Exception {
 
-        if(parcelas <= 0 || parcelas > 12){
-            throw new Exception("Parcelas devem ser entre 1 e 12");
+        if(parcelas <= 0 || parcelas > 3){
+            throw new Exception("Parcelas devem ser entre 1 e 3");
         }
         this.parcelas = parcelas;
     }
+
+    @Override
+    public String pagar(CarrinhoDeCompra carrinhoDeCompra) {
+
+        return "Parcelado em " + this.parcelas + "x";
+        
+    }
+
+
 
 }

@@ -2,12 +2,12 @@ package pagamento;
 
 import caixa.CarrinhoDeCompra;
 
-public class CartaoAVista implements FormaDePagamento{
+public class Boleto implements FormaDePagamento{
 
     @Override
     public String pagar(CarrinhoDeCompra carrinhoDeCompra) {
         // TODO Auto-generated method stub
-        return "Pagamento com cartão a vista";
+        return "Pagamento com boleto";
     }
     
 
