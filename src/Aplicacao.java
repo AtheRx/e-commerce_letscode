@@ -1,9 +1,6 @@
-import java.math.BigDecimal;
-
-import caixa.CarrinhoDeCompra;
 import caixa.Checkout;
+import cliente.Cliente;
 import pagamento.Boleto;
-import pagamento.CartaoParcelado;
 import pagamento.FormaDePagamento;
 import produtos.CategoriaProduto;
 import produtos.Produto;
@@ -15,14 +12,15 @@ public class Aplicacao {
         Produto monitor = new Produto("Monitor","Monitor HDMI", "200.00", CategoriaProduto.INFORMATICA);
         Produto geladeira = new Produto("Geladeira","Geladeira Grande", "3599.00", CategoriaProduto.CASA);
 
-        CarrinhoDeCompra carrinhoDeCompra = new CarrinhoDeCompra();
-        carrinhoDeCompra.adicionar(teclado);
-        carrinhoDeCompra.adicionar(monitor);
-        carrinhoDeCompra.adicionar(geladeira);
+        Cliente cliente = new Cliente("Fabio");
+
+        cliente.adicionarProdutoAoCarrinho(teclado);
+        cliente.adicionarProdutoAoCarrinho(monitor);
+        cliente.adicionarProdutoAoCarrinho(geladeira);
 
         FormaDePagamento formaDePagamento = new Boleto();
 
         Checkout checkout = new Checkout();
-        checkout.fecharCompra(carrinhoDeCompra, formaDePagamento);
+        checkout.fecharCompra(cliente, formaDePagamento);
     }
 }
