@@ -13,10 +13,12 @@ public class Aplicacao {
     
         Produto teclado = new Produto("Teclado","Teclado de computador USB", "10.50", CategoriaProduto.INFORMATICA);
         Produto monitor = new Produto("Monitor","Monitor HDMI", "200.00", CategoriaProduto.INFORMATICA);
+        Produto geladeira = new Produto("Geladeira","Geladeira Grande", "3599.00", CategoriaProduto.CASA);
 
         CarrinhoDeCompra carrinhoDeCompra = new CarrinhoDeCompra();
         carrinhoDeCompra.adicionar(teclado);
         carrinhoDeCompra.adicionar(monitor);
+        carrinhoDeCompra.adicionar(geladeira);
 
         FormaDePagamento formaDePagamento = new Boleto();
 
