@@ -7,7 +7,7 @@ public class Boleto implements FormaDePagamento{
     @Override
     public String pagar(CarrinhoDeCompra carrinhoDeCompra) {
         // TODO Auto-generated method stub
-        return "Pagamento com boleto";
+        return "Boleto";
     }
     
 

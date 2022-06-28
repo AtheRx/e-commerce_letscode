@@ -21,7 +21,7 @@ public class CartaoParcelado implements FormaDePagamento{
     @Override
     public String pagar(CarrinhoDeCompra carrinhoDeCompra) {
 
-        return "Parcelado em " + this.parcelas + "x";
+        return "Cartão de Credito em " + this.parcelas + "x";
         
     }
 

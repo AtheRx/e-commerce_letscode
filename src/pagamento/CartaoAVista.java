@@ -7,7 +7,7 @@ public class CartaoAVista implements FormaDePagamento{
     @Override
     public String pagar(CarrinhoDeCompra carrinhoDeCompra) {
         // TODO Auto-generated method stub
-        return "Pagamento com cartão a vista";
+        return "Cartão à vista";
     }
     
 
